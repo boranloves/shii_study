@@ -1,6 +1,20 @@
-hello! 반갑습니다! 이 파일은 shii 폴더의 README.md 파일입니다.
-```import shii```
-```shii.study(text, text, text)```
-```shii.study_return_text(text)```
-```shii.study_say(text)```
-자세한 것은 https://github.com/boranloves/shii 를 참고 하세요.
+시이의 학습 챗봇 기능을 모듈로!
+shii-study
+=============
+```python
+pip install -U shii-study
+import shii
+```
+# 1. 모듈 사용법
+모든 코드는 택스트가 리턴 됩니다.
+  ## 1-1. 학습
+   ```python
+shii.study(keyword, description, author_nickname)
+
+ex): await ctx.send(shii.study(keyword, description, author_nickname))
+
+```
+
+
+   
+   
