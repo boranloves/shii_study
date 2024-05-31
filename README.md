@@ -7,7 +7,7 @@ import shii
 ```
 
 자세한 것은 위키를 참고해 주세요
-
+https://github.com/boranloves/shii/wiki
 
    
    
