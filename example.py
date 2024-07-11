@@ -21,7 +21,7 @@ bot = Bot(intents=intents)
 async def on_message(message):
   if message.author == bot.user:
     return
-  if message.content.startswith('exa '):
+  if message.content.startswith('example '):
     message1 = message.content[4:]
     re = shii.study_say(message1)
     await message.channel.send(re)
