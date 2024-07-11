@@ -28,7 +28,7 @@ async def on_message(message):
 
 
 @bot.command()
-async def study(ctx, keyword: str, description: str):
+async def study_keyword(ctx, keyword: str, description: str):
   user = ctx.author.name
   re = shii.study(keyword, description, user)
   await ctx.send(re)
