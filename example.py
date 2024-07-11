@@ -28,14 +28,14 @@ async def on_message(message):
 
 
 @bot.command()
-async def test(ctx, keyword: str, description: str):
+async def study(ctx, keyword: str, description: str):
   user = ctx.author.name
   re = shii.study(keyword, description, user)
   await ctx.send(re)
 
 
 @bot.command()
-async def test2(ctx, keyword: str):
+async def delete_keyword(ctx, keyword: str):
   re = shii.del_study(keyword)
   await ctx.send(re)
 
