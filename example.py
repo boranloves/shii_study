@@ -10,6 +10,8 @@ class Bot(commands.Bot):
   async def on_ready(self):
     print(f"Logged in as {self.user}")
     await self.tree.sync()
+
+    '''기본 모듈 설정(지정되지 않는 경우 기본값으로 리턴'''
     shii.no_study_return_text('?')
     shii.study_return_text('네! 알았어요!')
 
@@ -27,6 +29,7 @@ async def on_message(message):
     await message.channel.send(re)
 
 
+'''키드 학습 커멘드'''
 @bot.command()
 async def study_keyword(ctx, keyword: str, description: str):
   user = ctx.author.name
@@ -34,6 +37,7 @@ async def study_keyword(ctx, keyword: str, description: str):
   await ctx.send(re)
 
 
+'''키워드 삭제 커멘드'''
 @bot.command()
 async def delete_keyword(ctx, keyword: str):
   re = shii.del_study(keyword)
